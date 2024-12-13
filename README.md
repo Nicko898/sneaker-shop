@@ -22,7 +22,7 @@
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/Nicko898/sneaker-shop.git
+   git clone https://github.com/YoelLazarte/sneaker-shop.git
    ```
 
 2. **Abri el archivo principal:**
