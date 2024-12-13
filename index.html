@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Programación I | Parcial 2 | Lazarte </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="css/estilos.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <!-- <h1>Programación I | Parcial 2 | Lazarte | Mi carrito</h1> -->
+      <div class="contenedor-icono">
+				<div class="contenedor-carro-icono">
+					<i class="bi bi-cart-dash carro-icono" style="font-size:50px;"><span>Carrito</span></i>
+					<div class="contenedor-contador-productos">
+						<span id="contador-productos">0</span>
+					</div>
+				</div>
+
+				<div class="contenedor-carro-productos carrito-escondido">
+					<div class="row-producto escondido">
+						<div class="carrito-producto">
+							<div class="info-carrito-producto">
+								<span class="cantidad-producto-carrito">1</span>
+								<p class="titulo-producto-carrito">Zapatos Nike</p>
+								<span class="precio-producto-carrito">$80</span>
+							</div>
+                <img src="img/menos.png" alt="restar producto" class="icono-menos">
+                <img src="img/cerrar.png" alt="cerrar" class="icono-cerrar">
+						</div>
+					</div>
+
+					<div class="carrito-total escondido">
+						<div>
+              <h3>Total:</h3>
+						<span class="total-pagar">$200</span>
+            </div>
+            <div>
+              <button class="btn comprar" data-bs-target="#modal-comprar" data-bs-toggle="modal">Comprar</button>
+              <button class="vaciar">Vaciar</button>
+            </div>
+					</div>
+					<p class="carro-vacio pt-3 text-center">El carrito está vacío</p>
+				</div>
+			</div>
+
+      <div class="filtros">
+        <ul class="menu">
+            <li>
+                <button id="todos" class="boton-categoria active">Todos</button>
+            </li>
+            <li>
+                <button id="moda" class="boton-categoria">Zapatillas de moda</button>
+            </li>
+            <li>
+                <button id="running" class="boton-categoria">Running</button>
+            </li>
+            <li>
+                <button id="futbol" class="boton-categoria">Futbol</button>
+            </li>
+        </ul>
+    </div>
+        </header>
+        <div class="contenedor-banners">
+
+        </div>
+        <main>
+            <div class="container">
+            <h2 class="text-center">Productos</h2>
+            <section class="d-flex flex-wrap w-100 justify-content-center contenedor-items">
+
+            </section>
+            </div>
+        </main>
+
+        <footer class="bg-body-secondary p-5">
+            <div class="container text-center border-bottom border-secondary pb-2">
+                <div class="row align-items-start">
+                  <div class="col">
+                    <h4 class="text-start">PROMOCIONES</h4>
+                    <ul>
+                        <li><a href="#">Estudiantes</a></li>
+                        <li><a href="#">Profesores</a></li>
+                        <li><a href="#">Cumpleaños</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h4 class="text-start">AYUDA</h4>
+                    <ul>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Contactanos</a></li>
+                        <li><a href="#">Cancelar compra</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h4 class="text-start">ACERCA DE NIKE</h4>
+                    <ul>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Inversionistas</a></li>
+                        <li><a href="#">Sustentabilidad</a></li>
+                    </ul>
+                  </div>
+                  <div class="col d-flex justify-content-center mt-4 my-md-auto column-gap-5" id="redes">
+                    <a href="https://www.instagram.com/nike/?hl=es" target="_blank"><i
+                        class="bi bi-instagram text-primary-emphasis fs-1"><span>Instagram</span></i></a>
+                    <a href="https://twitter.com/Nike" target="_blank" class="mx-4"><i
+                        class="bi bi-twitter-x text-primary-emphasis fs-1"><span>Twitter - X</span></i></a>
+                    <a href="https://www.tiktok.com/@nike?source=h5_t&lang=es" target="_blank"><i
+                        class="bi bi-tiktok text-primary-emphasis fs-1"><span>Tik Tok</span></i></a>
+                  </div>
+                </div>
+              </div>
+              <p class="text-center mt-4 fs-4 text-black">Todos los derechos reservados © Yoel Lazarte - Argentina</p>
+        </footer>
+
+        <div id="modal-carro-comprar">
+          <div class="modal fade" id="modal-comprar" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header modal-header-2">
+                  <!-- <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1> -->
+                  <span class="cerrar cerrar-compra" data-bs-dismiss="modal" aria-label="Close">&times;</span>
+                </div>
+                <!-- <div class="modal-body-comprar">
+                  Show a second modal and hide this one with the button below.
+                </div> -->
+                <div class="modal-footer">
+                  <button class="btn btn-primary botonModal1 fs-4" data-bs-target="#modaldatos" data-bs-toggle="modal">Adquirir productos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="modaldatos" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header-datos modal-header">
+                  <!-- <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1> -->
+                  <span class="cerrar cerrar-compra" data-bs-dismiss="modal" aria-label="Close">&times;</span>
+                </div>
+                <!-- <div class="modal-body-comprar">
+                  Hide this modal and show the first with the button below.
+                </div>-->
+                <div class="modal-footer-2 pt-4 border-top border-top-secondary-subtle">
+                  <input type="submit" value="Comprar" class="btn btn-primary botonModal2 fs-4 w-75"/> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+        <div id="miModal" class="modal">
+          <div class="flex" id="flex">
+            <div class="contenido-modal">
+              <div class="modal-header flex">
+                <span class="cerrar" id="cerrar">&times;</span>
+              </div>
+              <div class="modal-body row" id="modalBody">
+                
+              </div>
+              <div class="footer">
+                <h3>Nike Oficial &copy;</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="parcial.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
